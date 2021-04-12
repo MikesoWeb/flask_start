@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="random_note">
+<h1 class="random_word">{{ random_query.word.capitalize() }}</h1>
+
+<form action="/random_note" method="get" class="all_notes_form">
+
+    <input type="submit" value="Случайная запись" class="button">
+</form>
+
+
+<div id="content">
+    <a href="#nav"><h5>Забыли перевод?</h5></a>
+  <div class="expandable" id="nav">
+      <p>{{ random_query.translate.capitalize() }}</p>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}
