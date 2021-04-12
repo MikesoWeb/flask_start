@@ -5,7 +5,7 @@ justify-content: space-between;
 }
 
 
-.main{
+.content{
 display: flex;
 justify-content: center;
 align-items: center;
