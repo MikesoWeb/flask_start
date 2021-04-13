@@ -7,7 +7,7 @@
 <div class="show_notes">
 
     <div class="card">
-        <form action="/count_notes" method="post" class="all_notes_form">
+        <form action="{{ url_for('count_notes') }}" method="post" class="all_notes_form">
 
             <input type="text" name="count" required pattern="^[0-9]+$" class="count_notes"><br>
             <input type="submit" value="Кол-во записей" class="button">
@@ -16,14 +16,14 @@
     </div>
 
     <div class="card">
-        <form action="/all_notes" method="get" class="all_notes_form">
+        <form action="{{ url_for('all_notes') }}" method="get" class="all_notes_form">
             <input type="submit" value="Все записи" class="button">
         </form>
 
     </div>
 
     <div class="card">
-        <form action="/random_note" method="get" class="all_notes_form">
+        <form action="{{ url_for('random_note') }}" method="get" class="all_notes_form">
 
             <input type="submit" value="Случайная запись" class="button">
         </form>

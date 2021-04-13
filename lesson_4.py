@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 lst_main_menu = [{"name": "Главная", "url": "/"},
-                 {"name": "Добавить", "url": "/add_page"},
+                 {"name": "Добавить", "url": "/add"},
                  {"name": "Обновить", "url": "/update"},
                  {"name": "Удалить", "url": "/delete"},
                  {"name": "Просмотр", "url": "/show"}]
@@ -20,12 +20,12 @@ def index():
 
 
 # ADD
-@app.route('/add_page')
+@app.route('/add')
 def add():
     return render_template('add.html', title='Добавить', lst_main_menu=lst_main_menu)
 
 
-@app.route('/add', methods=['POST'])
+@app.route('/add_word', methods=['POST'])
 def input_data():
     if request.method == 'POST':
         word = request.form['word'].capitalize()
@@ -37,10 +37,10 @@ def input_data():
         except IntegrityError:
             flash(f'Слово <b>{word}</b> в базе существует!', category='attention')
 
-        return render_template('add.html')
+        return render_template('add.html', lst_main_menu=lst_main_menu)
 
     else:
-        return redirect(url_for('add_page'))
+        return redirect(url_for('add_word'))
 
 
 @app.route('/update')
