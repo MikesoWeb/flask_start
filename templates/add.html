@@ -1,11 +1,15 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-<title>{{ title }}</title>
-{% endblock %}
+
 
 {% block content %}
 
+{% for cat, msg in get_flashed_messages(True) %}
+
+    <div class="flash {{ cat }}">{{ msg|safe }}</div>
+
+
+{% endfor %}
 
 <form action="{{ url_for('input_data') }}" method="post" class="add_data_form">
         <input type="text" name="word" class="word_input" placeholder="Введите английское слово" required
