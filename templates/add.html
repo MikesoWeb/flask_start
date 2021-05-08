@@ -2,8 +2,9 @@
 
 
 
-{% block content %}
 
+{% block content %}
+ <div class="empty_block"></div>
 {% for cat, msg in get_flashed_messages(True) %}
 
     <div class="flash {{ cat }}">{{ msg|safe }}</div>

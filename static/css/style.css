@@ -18,8 +18,13 @@ margin: 0 auto 5px;
 .header{
 display: flex;
 justify-content: space-between;
+margin: 0 auto;
+width: 70%;
 }
 
+.empty_block{
+height: 180px;
+}
 
 .logo_h1{
 width: 30%;
@@ -31,15 +36,15 @@ margin-top: 50px;
 border: 5px solid yellow;
 border-bottom-left-radius: 200px;
 border-top-right-radius: 200px;
-text-shadow: 10px 3px 5px grey;
-box-shadow: -5px 5px 15px lightgreen;
+text-shadow: 10px 3px 20px grey;
+box-shadow: -5px 10px 20px lightgreen;
 margin-bottom: 50px;
 }
 
 
 .main{
-display: flex;
-justify-content: center;
+width: 60%;
+margin: 0 auto;
 align-items: center;
 height: 500px;
 }
@@ -55,7 +60,7 @@ align-items: center;
 .menu li{
 margin-top: 40px;
 list-style: none;
-font-size: 24px;
+font-size: 20px;
 margin-right: 30px;
 
 }
@@ -144,7 +149,7 @@ box-shadow: 15px -6px 8px skyblue;
 .info{
 display: flex;
 margin: 40px auto 0;
-height: 300px;
+height: 400px;
 border: 3px red double;
 box-shadow: -8px 5px 10px pink;
 box-shadow: 15px -6px 8px skyblue;
@@ -178,7 +183,7 @@ display: flex;
 margin: 0 auto;
 justify-content: space-around;
 width: 60%;
-padding-top: 100px;
+padding-top: 200px;
 align-self: baseline;
 
 }

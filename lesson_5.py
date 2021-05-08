@@ -92,12 +92,6 @@ def show():
     return render_template('show.html', title='Просмотр', lst_main_menu=lst_main_menu, count_words=count_words)
 
 
-@app.route('/show')
-def all_notes_page():
-    count_words = len(English.select())
-    return render_template('show.html', count_words=count_words, lst_main_menu=lst_main_menu)
-
-
 @app.route('/random_note')
 def random_note():
     count_words = len(English.select())

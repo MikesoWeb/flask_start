@@ -1,20 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-<title>{{ title }}</title>
+
+    <title>{{ title }}</title>
+
 {% endblock %}
 
 {% block content %}
 
+    <div class="info">
+        <div class="description">
 
-<div class="info">
-    <div class="description">
-        🅼🅸🅺🅷🅰🅸🅻 🆃🅴🆁🅴🅺🅷🅾🆅 - <br>🅵🆄🅻🅻🆂🆃🅰🅲🅺 🅳🅴🆅🅴🅻🅾🅿🅴🆁
+            🅼🅸🅺🅷🅰🅸🅻 🆃🅴🆁🅴🅺🅷🅾🆅 - <br>🅵🆄🅻🅻🆂🆃🅰🅲🅺 🅳🅴🆅🅴🅻🅾🅿🅴🆁
 
+        </div>
+        <img src="{{ url_for('static', filename='img/ioA6tYaKRbU.jpg') }}" class="logo">
     </div>
-    <img src="{{ url_for('static', filename='img/ioA6tYaKRbU.jpg') }}" class="logo">
-</div>
-
-
 
 {% endblock %}
