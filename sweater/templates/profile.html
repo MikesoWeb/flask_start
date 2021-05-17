@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Личный кабинет пользователя {{ g.user.username }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div class="user_info">
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='img/user_foto.jpg')}}" alt="foto">
+    </div>
+    <div class="welcome">
+        <p>Авторизованный пользователь</p>
+        <h1 class="hello">Hello, {{ g.user.username }}</h1>
+        <h3 class="status">{{ status }}</h3>
+        <br>
+        <form action="/logout" method="get">
+            <input type="submit" value="Выйти" class="exit_btn">
+        </form>
+    </div>
+
+
+</div>
+<br>
+<br>
+<br>
+
+<h3>Список друзей пользователя {{ g.user.username }}</h3>
+<br>
+<br>
+<div class="user_friends">
+    {% for foto in all_user_foto %}
+
+    <div class="user_card">
+        <a href="{{ foto }}">
+        <img src="{{ foto }}" alt="">
+
+        </a>
+
+        {% if foto in random_status.values() %}
+            <p class="status">онлайн</p>
+        {% endif %}
+
+    </div>
+
+    {% endfor %}
+
+
+</div>
+
+
+</body>
+</html>
