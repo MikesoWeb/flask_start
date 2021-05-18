@@ -1,0 +1,27 @@
+
+.header{
+display: flex;
+justify-content: space-between;
+}
+
+
+.content{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 500px;
+border: 1px solid green;
+}
+
+.menu{
+display: flex;
+margin: 20px auto;
+justify-content: flex-end;
+align-items: center;
+}
+
+h1{
+color: lightgrey;
+font-size: 45px;
+}
+
